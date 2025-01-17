@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .fact {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .fact h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #007BFF;
+        }
+
+        .fact p {
+            margin: 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solar System Facts</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "The Sun's Dominance",
+                "description": "The Sun contains about 99.86% of the total mass of the solar system, making it the most massive object and the primary source of light and heat."
+            },
+            {
+                "fact": "Planetary Count",
+                "description": "There are eight recognized planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Pluto was reclassified as a 'dwarf planet' in 2006."
+            },
+            {
+                "fact": "Gas Giants vs. Terrestrial Planets",
+                "description": "The solar system is divided into two main categories of planets: the four terrestrial planets (Mercury, Venus, Earth, Mars) are rocky, while the four gas giants (Jupiter, Saturn, Uranus, Neptune) are composed mostly of gases."
+            },
+            {
+                "fact": "Jupiter's Size",
+                "description": "Jupiter is the largest planet in the solar system, with a diameter of about 86,881 miles (139,822 kilometers), making it more than 11 times wider than Earth."
+            },
+            {
+                "fact": "Saturn's Rings",
+                "description": "Saturn is famous for its stunning rings, which are made up of ice and rock particles. These rings are the most extensive and brightest in the solar system."
+            },
+            {
+                "fact": "Mars' Moons",
+                "description": "Mars has two small moons, Phobos and Deimos, which are thought to be captured asteroids from the asteroid belt."
+            },
+            {
+                "fact": "The Kuiper Belt",
+                "description": "Beyond Neptune lies the Kuiper Belt, a region filled with icy bodies and dwarf planets, including Pluto, Haumea, and Makemake."
+            },
+            {
+                "fact": "The Oort Cloud",
+                "description": "The Oort Cloud is a theoretical cloud of icy objects that is believed to surround the solar system at a distance of up to 100,000 AU (astronomical units) from the Sun, serving as a source for long-period comets."
+            },
+            {
+                "fact": "Solar Wind",
+                "description": "The Sun emits a stream of charged particles known as solar wind, which can affect space weather and has the potential to disrupt satellite communications and power grids on Earth."
+            },
+            {
+                "fact": "Exoplanets",
+                "description": "While our solar system has eight planets, astronomers have discovered thousands of exoplanets (planets outside our solar system) in recent years, expanding our understanding of planetary systems in the universe."
+            }
+        ];
+
+        function displayFacts() {
+            const factsContainer = document.getElementById('facts-container');
+            facts.forEach(fact => {
+                const factDiv = document.createElement('div');
+                factDiv.className = 'fact';
+                factDiv.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+                factsContainer.appendChild(factDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', displayFacts);
+    </script>
+</body>
+</html>
